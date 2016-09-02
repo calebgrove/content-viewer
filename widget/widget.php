@@ -38,7 +38,7 @@ else {
 			array(
 				'text' => 'Open README',
 				'icon' => 'external-link-square',
-				'link' => 'http://calebgrove.com',
+				'link' => 'https://github.com/CalebGrove/kirby-content-viewer-widget',
 				'target' => '_blank',
 			)
 		),
