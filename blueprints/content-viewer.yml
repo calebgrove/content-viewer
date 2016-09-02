@@ -1,0 +1,13 @@
+title: Content Viewer Widget Source
+pages: false
+files: true
+fields:
+    title:
+        label: Title
+        type: text
+        help: This text will be used as the title for the Content Viewer widget.
+    text:
+        label: Text
+        type: textarea
+        readonly: false
+        help: This is the field that will be rendered in the Content Viewer widget.

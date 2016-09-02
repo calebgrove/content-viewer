@@ -1,0 +1,29 @@
+# Content Viewer Kirby Widget
+
+A nifty little Kirby widget plugin that allows you to show a block of Kirbytext or Markdown content in Kirby's panel. It is particularly useful for providing documentation for the website editors.
+
+![Screenshot of the widget](screenshot.png)
+
+## Installation and Setup
+
+Clone or download this repo, rename the folder to `content-viewer`, and move it into your `/site/plugins/` folder.
+
+Create a new page anywhere on your website using the `Content Viewer Widget Source` blueprint. The title of the page will be used as the widget title, and the content will be used for the widget content.
+
+**At this time, when the user clicks on the Open Full Page option, the page will use your `default.php` template. In the future, I plan on adding a custom template to this plugin.**
+
+## Advanced Configuration
+
+If you don't like how things are set up, you can customize the configuration.
+
+	c::set('plugin.content-viewer.widget.page', page());
+A page object that will be used for the content viewer. Accepted value: Any single page object. Default: `panel()->site()->index()->findBy('intendedTemplate', 'content-viewer-source')`
+
+
+	c::set('plugin.content-viewer.widget.field', 'fieldname');
+The field name (from the page, see above) that will be used for the content viewer. Accepted value: Any text field name from the page. Default: `text`
+
+	c::set('plugin.content-viewer.widget.title', 'Widget Title');
+The widget title that will be displayed in the panel. Accepted value: Any string. Default: `$page->title()`
+
+If the CSS is incomplete for your purposes, you can edit it inside the `widget/template.php` file. If you think your additions would be beneficial in the core plugin, please send a pull request!
