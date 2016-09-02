@@ -6,7 +6,9 @@ A nifty little Kirby widget plugin that allows you to show a block of Kirbytext 
 
 ## Installation and Setup
 
-Clone or [download](https://github.com/CalebGrove/kirby-content-viewer-widget/archive/master.zip) this repo, rename the folder to `content-viewer`, and move it into your `/site/plugins/` folder.
+Clone or [download](https://github.com/CalebGrove/content-viewer/archive/master.zip) this repo, rename the folder to `content-viewer`, and move it into your `/site/plugins/` folder. If you are using the [Kirby CLI](https://github.com/getkirby/cli), you can install it with this command:
+
+	kirby plugin:install CalebGrove/content-viewer
 
 Create a new page anywhere on your website using the `Content Viewer Widget Source` blueprint. The title of the page will be used as the widget title, and the content will be used for the widget content.
 
