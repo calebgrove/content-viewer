@@ -61,6 +61,7 @@
 	}
 	.content-viewer-widget pre {
 		font-family: 'Source Code Pro', monospace;
+		overflow: scroll;
 		background-color: #fff;
 		padding: .25em .5em;
 		border: 1px solid #E4E4E4;
