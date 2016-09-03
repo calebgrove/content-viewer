@@ -12,8 +12,6 @@ Clone or [download](https://github.com/CalebGrove/content-viewer/archive/master.
 
 Create a new page anywhere on your website using the `Content Viewer Widget Source` blueprint. The title of the page will be used as the widget title, and the content will be used for the widget content.
 
-**At this time, when the user clicks on the Open Full Page option, the page will use your `default.php` template. In the future, I plan on adding a custom template to this plugin.**
-
 ## Advanced Configuration
 
 If you don't like how things are set up, you can customize the configuration.
@@ -27,5 +25,3 @@ The field name (from the page, see above) that will be used for the content view
 
 	c::set('plugin.content-viewer.widget.title', 'Widget Title');
 The widget title that will be displayed in the panel. Accepted value: Any string. Default: `$page->title()`
-
-If the CSS is incomplete for your purposes, you can edit it inside the `widget/template.php` file. If you think your additions would be beneficial in the core plugin, please send a pull request!

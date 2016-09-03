@@ -1,6 +1,6 @@
 <?php
 
-$page = c::get('plugin.content-viewer.widget.page', panel()->site()->index()->findBy('intendedTemplate', 'content-viewer-source'));
+$page = c::get('plugin.content-viewer.widget.page', panel()->site()->index()->findBy('intendedTemplate', 'content-viewer'));
 
 if($page){
 	$title = c::get('plugin.content-viewer.widget.title', $page->title());
@@ -22,7 +22,7 @@ if($page){
 		),
 		'html' => function() {
 			return tpl::load(__DIR__ . DS . 'template.php', array(
-				'page' => c::get('plugin.content-viewer.widget.page', panel()->site()->index()->findBy('intendedTemplate', 'content-viewer-source')),
+				'page' => c::get('plugin.content-viewer.widget.page', panel()->site()->index()->findBy('intendedTemplate', 'content-viewer')),
 				'field' => c::get('plugin.content-viewer.widget.field', 'text'),
 			));
 		}
@@ -31,14 +31,14 @@ if($page){
 else {
 	return array(
 		'title' => array(
-			'text'	 => 'Content Viewer Plugin',
+			'text'	 => 'Content Viewer Widget',
 			'compressed' => true
 		),
 		'options' => array(
 			array(
 				'text' => 'Open README',
 				'icon' => 'external-link-square',
-				'link' => 'https://github.com/CalebGrove/kirby-content-viewer-widget',
+				'link' => 'https://github.com/CalebGrove/content-viewer',
 				'target' => '_blank',
 			)
 		),

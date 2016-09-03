@@ -2,7 +2,7 @@
   "name": "content-viewer",
   "description": "A widget that allows you to show a block of Kirbytext or Markdown content on Kirby's panel.",
   "author": "Caleb Grove <caleb@grovedesign.co>",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "kirby-plugin",
   "license": "MIT"
 }

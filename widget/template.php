@@ -1,10 +1,11 @@
-  <style>
+<style>
 	article.content-viewer-widget {
 		overflow: scroll;
 		max-height: 30em;
 		background-color: #efefef;
 		border: 2px solid #ddd;
 		padding: 1em;
+		line-height: 1.4;
 	}
 	.content-viewer-widget h1 {
 		font-size: 1.5em;
@@ -51,18 +52,19 @@
 		font-style: italic;
 	}
 	.content-viewer-widget code {
+		font-family: 'Source Code Pro', monospace;
+		font-size: 0.9em;
 		background-color: #fff;
 		padding: .15em .25em;
 		border: 1px solid #E4E4E4;
 		border-radius: 0.2em;
-		font-family: monospace;
 	}
 	.content-viewer-widget pre {
+		font-family: 'Source Code Pro', monospace;
 		background-color: #fff;
 		padding: .25em .5em;
 		border: 1px solid #E4E4E4;
 		border-radius: 0.2em;
-		font-family: monospace;
 	}
 	.content-viewer-widget pre code {
 		background-color: none;
