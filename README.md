@@ -10,7 +10,7 @@ Clone or [download](https://github.com/CalebGrove/content-viewer/archive/master.
 
 	kirby plugin:install CalebGrove/content-viewer
 
-Create a new page anywhere on your website using the `Content Viewer Widget Source` blueprint. The title of the page will be used as the widget title, and the content will be used for the widget content.
+Using the panel, create a new page anywhere on your website. For the page template, choose `Content Viewer Widget`. The title of the page will be used as the widget title, and the content will be used for the widget content.
 
 ## Advanced Configuration
 
