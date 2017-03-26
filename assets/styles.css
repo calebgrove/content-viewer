@@ -1,0 +1,170 @@
+/*
+* Styles for the [Content Viewer Kirby widget](https://github.com/CalebGrove/content-viewer).
+* Author: Caleb Grove <caleb@grovedesign.co>
+*
+* Container classes:
+* `.content-viewer-widget`: This class is only applied to the dashboard widget.
+* `.content-viewer-page`: This class is only applied to the full page view.
+* `.content-viewer-global`: This class is applied to both.
+*/
+
+
+
+	/* Global styles apply to both widget and full page views */
+
+	.content-viewer-global article {
+		background-color: #efefef;
+		border: 2px solid #ddd;
+		padding: 1em;
+	}
+	.content-viewer-global h1 {
+		font-size: 1.5em;
+		margin: .5em 0;
+	}
+	.content-viewer-global h2 {
+		font-size: 1.3em;
+		margin: .5em 0;
+	}
+	.content-viewer-global h3 {
+		font-size: 1.2em;
+		margin: .5em 0;
+	}
+	.content-viewer-global h4 {
+		font-size: 1em;
+		margin: .5em 0;
+	}
+	.content-viewer-global h5 {
+		font-size: 0.9em;
+		text-transform: uppercase;
+		margin: .5em 0;
+	}
+	.content-viewer-global h6 {
+		font-size: 0.7em;
+		text-transform: uppercase;
+		margin: .5em 0;
+	}
+	.content-viewer-global p {
+		margin: 1em 0;
+	}
+	.content-viewer-global img {
+		max-width: 100%;
+		height: auto;
+	}
+	.content-viewer-global hr {
+		margin: 1em 0;
+	}
+	.content-viewer-global ol, .content-viewer-global ul {
+		margin-top: 1em;
+		margin-bottom: 1em;
+		margin-left: 2em;
+		list-style-position: inside;
+	}
+	.content-viewer-global a {
+		text-decoration: underline;
+	}
+	.content-viewer-global a:hover {
+		text-decoration: none;
+	}
+	.content-viewer-global blockquote {
+		margin: 1em 0;
+		border-left: 3px solid #dddddd;
+		padding-left: 0.5em;
+		font-style: italic;
+	}
+	.content-viewer-global code {
+		font-family: 'Source Code Pro', monospace;
+		font-size: 0.9em;
+		background-color: #fff;
+		padding: .15em .25em;
+		border: 1px solid #E4E4E4;
+		border-radius: 0.2em;
+	}
+	.content-viewer-global pre {
+		font-family: 'Source Code Pro', monospace;
+		background-color: #fff;
+		padding: .25em .5em;
+		border: 1px solid #E4E4E4;
+		border-radius: 0.2em;
+		overflow: scroll;
+	}
+	.content-viewer-global pre code {
+		background-color: transparent;
+		padding: 0;
+		border: none;
+		border-radius: 0;
+	}
+	.content-viewer-global table {
+		background-color: #fff;
+		border: 2px solid #E4E4E4;
+		border-radius: 0.2em;
+		border-collapse: collapse;
+		width: 100%;
+	}
+	.content-viewer-global th, td {
+		border: 1px solid #E4E4E4;
+		padding: .25em .5em;
+	}
+	.content-viewer-global .video-container {
+		position: relative;
+		padding-bottom: 56.25%;
+		padding-top: 30px; height: 0; overflow: hidden;
+	}
+	.content-viewer-global .video-container iframe,
+	.content-viewer-global .video-container object,
+	.content-viewer-global .video-container embed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.content-viewer-global article > :first-child {
+		margin-top: 0;
+	}
+	.content-viewer-global article > :last-child {
+		margin-bottom: 0;
+	}
+
+
+
+	/* Widget-only styles */
+
+	div.content-viewer-widget article {
+		overflow: scroll;
+		max-height: 30em;
+		line-height: 1.4;
+	}
+
+
+
+	/* Full page only styles */
+
+	body.content-viewer-page {
+		margin: 0;
+		padding: 1em 0;
+		font-family: 'Source Sans Pro', sans-serif;
+		font-size: 1.2em;
+		line-height: 1.5;
+	}
+
+	.content-viewer-page article {
+		max-width: 45em;
+		margin: auto;
+		padding: calc(2vmin + .25em) calc(3vmin + .25em);
+		border: none;
+	}
+
+		.content-viewer-page article > *:first-child {
+			margin-top: 0;
+		}
+
+		.content-viewer-page article > *:last-child {
+			margin-bottom: 0;
+		}
+
+	@media screen and (min-width: 30em){
+		.content-viewer-page article {
+			border: 2px solid #ddd;
+		}
+
+	}
