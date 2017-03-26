@@ -1,6 +1,6 @@
 # Content Viewer Kirby Widget
 
-A nifty little Kirby widget plugin that allows you to show a block of Kirbytext or Markdown content in Kirby's panel. It is particularly useful for providing documentation for the website editors.
+A nifty little [Kirby](https://getkirby.com) widget that allows you to show a block of Kirbytext or Markdown content in Kirby's panel. It is particularly useful for providing documentation for website editors.
 
 ![Screenshot of the widget](screenshot.png)
 
@@ -10,18 +10,16 @@ Clone or [download](https://github.com/CalebGrove/content-viewer/archive/master.
 
 	kirby plugin:install CalebGrove/content-viewer
 
-Using the panel, create a new page anywhere on your website. For the page template, choose `Content Viewer Widget`. The title of the page will be used as the widget title, and the content will be used for the widget content.
+Now, open up the panel and you should see the new widget on the dashboard. To change the content, click on the **Edit** button at the top-right of the widget. **This option will *only* be visible to users with the role of administrator.**
 
-## Advanced Configuration
+If you want to customize the CSS, you may do so by copying the  `styles.css` file from this plugin's `assets` folder to `/assets/plugins/content-viewer/styles.css`. Kirby will now serve your version of the file, and updating this plugin won't overwrite it.
 
-If you don't like how things are set up, you can customize the configuration.
+## Changelog
 
-	c::set('plugin.content-viewer.widget.page', page());
-A page object that will be used for the content viewer. Accepted value: Any single page object. Default: `panel()->site()->index()->findBy('intendedTemplate', 'content-viewer-source')`
+### 1.2.0
 
-
-	c::set('plugin.content-viewer.widget.field', 'fieldname');
-The field name (from the page, see above) that will be used for the content viewer. Accepted value: Any text field name from the page. Default: `text`
-
-	c::set('plugin.content-viewer.widget.title', 'Widget Title');
-The widget title that will be displayed in the panel. Accepted value: Any string. Default: `$page->title()`
+* [Much DRYer CSS](https://github.com/CalebGrove/content-viewer/issues/1).
+* The content page will no longer be visible in the panel, instead, users with the role of Administrator will see a new **Edit** option for the widget.
+* The full page view is no longer publicly visible. Now, the user must be logged in and have panel access to view it.
+* When the plugin is loaded for the first time, it will create the page automatically and prompt you to edit it.
+* Advanced config options were removed as my implementation of them was just too buggy.
