@@ -1,6 +1,31 @@
 <?php
 
 $page = c::get('plugin.content-viewer.widget.page', panel()->site()->index()->findBy('intendedTemplate', 'content-viewer'));
+if($page->$field()->isNotEmpty()){
+	$title = $page->title();
+	$link = $page->url();
+
+
+	$options = array(
+		array(
+			'text' => 'Open full page',
+			'icon' => 'external-link-square',
+			'link' => $link,
+			'target' => '_blank',
+		)
+	);
+
+	if($user = $user->isAdmin()){
+		array_unshift(
+			$options,
+			array(
+				'text' => 'Edit',
+				'icon' => 'pencil',
+				'link' => $page->url('edit'),
+			)
+		);
+	}
+
 
 if($page){
 	$title = c::get('plugin.content-viewer.widget.title', $page->title());
@@ -12,36 +37,38 @@ if($page){
 			'target' => '_blank',
 			'compressed' => true
 		),
-		'options' => array(
-			array(
-				'text' => 'Open full page',
-				'icon' => 'external-link-square',
-				'link' => $link,
-				'target' => '_blank',
-			)
-		),
+		'options' => $options,
 		'html' => function() {
-			return tpl::load(__DIR__ . DS . 'template.php', array(
-				'page' => c::get('plugin.content-viewer.widget.page', panel()->site()->index()->findBy('intendedTemplate', 'content-viewer')),
-				'field' => c::get('plugin.content-viewer.widget.field', 'text'),
-			));
+			return tpl::load(__DIR__ . DS . 'template.php');
 		}
 	);
 }
 else {
+	$options = array(
+		array(
+			'text' => 'Open README',
+			'icon' => 'external-link-square',
+			'link' => 'https://github.com/CalebGrove/content-viewer',
+			'target' => '_blank',
+		)
+	);
+
+	if($user = $user->isAdmin()){
+		array_unshift(
+			$options,
+			array(
+				'text' => 'Edit',
+				'icon' => 'pencil',
+				'link' => $page->url('edit'),
+			)
+		);
+	}
 	return array(
 		'title' => array(
 			'text'	 => 'Content Viewer Widget',
 			'compressed' => true
 		),
-		'options' => array(
-			array(
-				'text' => 'Open README',
-				'icon' => 'external-link-square',
-				'link' => 'https://github.com/CalebGrove/content-viewer',
-				'target' => '_blank',
-			)
-		),
+		'options' => $options,
 		'html' => function() {
 			return tpl::load(__DIR__ . DS . 'template.php');
 		}

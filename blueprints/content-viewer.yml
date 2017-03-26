@@ -1,6 +1,10 @@
 title: Content Viewer Widget
 pages: false
 files: true
+hide: true
+options:
+    status: false
+    delete: false
 fields:
     title:
         label: Title
@@ -9,5 +13,4 @@ fields:
     text:
         label: Text
         type: textarea
-        readonly: false
         help: This is the field that will be rendered in the Content Viewer widget.

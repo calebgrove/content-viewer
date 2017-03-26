@@ -6,3 +6,6 @@
 <?php endif ?>
 </article>
 echo css('assets/plugins/content-viewer/styles.css')
+	<?php else: ?>
+		<p>Welcome! Click on the <strong>Edit</strong> button to edit the content of this widget. If you don't see that button, please contact the website administrator.</p>
+	<?php endif ?>
