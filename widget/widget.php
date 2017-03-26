@@ -1,6 +1,9 @@
 <?php
 
-$page = c::get('plugin.content-viewer.widget.page', panel()->site()->index()->findBy('intendedTemplate', 'content-viewer'));
+$page = panel()->site()->index()->findBy('intendedTemplate', 'content-viewer');
+$field = 'text';
+$user = panel()->user();
+
 if($page->$field()->isNotEmpty()){
 	$title = $page->title();
 	$link = $page->url();
@@ -27,9 +30,6 @@ if($page->$field()->isNotEmpty()){
 	}
 
 
-if($page){
-	$title = c::get('plugin.content-viewer.widget.title', $page->title());
-	$link = c::get('plugin.content-viewer.widget.link', $page->url());
 	return array(
 		'title' => array(
 			'text'	 => $title,
