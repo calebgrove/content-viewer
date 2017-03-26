@@ -13,8 +13,12 @@
 </head>
 <body class="content-viewer-global content-viewer-page">
 	<article>
+		<?php if($user = $site->user() and $user->hasPanelAccess()): ?>
 		<h1><?php echo $page->title()->html() ?></h1>
 		<?php echo $page->text()->kirbytext() ?>
+	<?php else: ?>
+		<p>You need to be <a href="/panel">logged in</a> to see this content.</p>
+	<?php endif ?>
 	</article>
 </body>
 </html>
