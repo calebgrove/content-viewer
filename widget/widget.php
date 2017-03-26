@@ -65,7 +65,7 @@ else {
 	}
 	return array(
 		'title' => array(
-			'text'	 => 'Content Viewer Widget',
+			'text'	 => 'Content viewer',
 			'compressed' => true
 		),
 		'options' => $options,

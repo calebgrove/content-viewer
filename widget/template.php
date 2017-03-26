@@ -2,13 +2,16 @@
 $page = panel()->site()->index()->findBy('intendedTemplate', 'content-viewer');
 $field = 'text';
 
-<?php if($page): ?>
-	<?php echo $page->$field()->kirbytext() ?>
-<?php else: ?>
-	<p>Uh-oh, we can't find the page with the content. Have you created one yet using the <code>Content Viewer Widget</code> template?</p>
-<?php endif ?>
-</article>
 echo css('assets/plugins/content-viewer/styles.css')
+?>
+
+
+<div class="content-viewer-global content-viewer-widget">
+	<article>
+	<?php if($page->$field()->isNotEmpty()): ?>
+		<?php echo $page->$field()->kirbytext() ?>
+
+
 	<?php elseif(c::get('plugin.content-viewer.widget.page') || c::get('plugin.content-viewer.widget.field') || c::get('plugin.content-viewer.widget.title')): ?>
 		<p>The configuration options for this widget were removed in v1.2.0. Don't worry, none of your data has been deleted! Here are the configs you were using, and their workarounds:</p>
 		<ul>
@@ -28,3 +31,5 @@ echo css('assets/plugins/content-viewer/styles.css')
 	<?php else: ?>
 		<p>Welcome! Click on the <strong>Edit</strong> button to edit the content of this widget. If you don't see that button, please contact the website administrator.</p>
 	<?php endif ?>
+	</article>
+</div>
