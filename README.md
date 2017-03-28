@@ -16,7 +16,12 @@ If you want to customize the CSS, you may do so by copying the  `styles.css` fil
 
 ## Changelog
 
-### 1.2.0
+### [1.2.1](https://github.com/CalebGrove/content-viewer/releases/tag/1.2.1)
+3/28/17
+
+* Hotfix for [breaking multi-lang websites](https://github.com/CalebGrove/content-viewer/issues/2).
+
+### [1.2.0](https://github.com/CalebGrove/content-viewer/releases/tag/1.2.0)
 
 * [Much DRYer CSS](https://github.com/CalebGrove/content-viewer/issues/1).
 * The content page will no longer be visible in the panel, instead, users with the role of Administrator will see a new **Edit** option for the widget.
