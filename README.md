@@ -16,6 +16,10 @@ If you want to customize the CSS, you may do so by copying the  `styles.css` fil
 
 ## Changelog
 
+### [1.2.2](https://github.com/CalebGrove/content-viewer/releases/tag/1.2.2)
+
+* [Fixes widget breaking on first load in newer versions of Kirby.](https://github.com/calebgrove/content-viewer/issues/4)
+
 ### [1.2.1](https://github.com/CalebGrove/content-viewer/releases/tag/1.2.1)
 3/28/17
 
