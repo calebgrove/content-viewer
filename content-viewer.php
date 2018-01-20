@@ -6,8 +6,8 @@ $kirby->set('template', 'content-viewer', __DIR__ . '/templates/content-viewer.p
 
 
 // If the page doesn't exist yet, create it.
-if(!site()->findBy('intendedTemplate', 'content-viewer')) {
-	site()->create('content-viewer', 'content-viewer', array(
+if(!site()->pages()->findBy('intendedTemplate', 'content-viewer')) {
+	site()->pages()->create('content-viewer', 'content-viewer', array(
 		'title' => '',
 		'text' => ''
 	));
