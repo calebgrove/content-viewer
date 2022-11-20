@@ -1,6 +1,6 @@
 # Content Viewer Kirby Widget
 
-A nifty little [Kirby](https://getkirby.com) widget that allows you to show a block of Kirbytext or Markdown content in Kirby's panel. It is particularly useful for providing documentation for website editors.
+A nifty little [Kirby 2](https://github.com/getkirby-v2) widget that allows you to show a block of Kirbytext or Markdown content in Kirby's panel. It is particularly useful for providing documentation for website editors.
 
 ![Screenshot of the widget](screenshot.png)
 
